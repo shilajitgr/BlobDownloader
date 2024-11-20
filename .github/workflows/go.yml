@@ -58,6 +58,8 @@ jobs:
       uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_RBAC_CREDENTIALS }}
+    - name: Validate account
+      run: az account show
     - name: Upload to Azure Blob Storage
       env:
         AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
