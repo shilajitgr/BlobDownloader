@@ -72,5 +72,7 @@ jobs:
           -f $BINARY_PATH \
           -c $AZURE_CONTAINER_NAME \
           -n downloader.zip \
-          --auth-mode login
+          --auth-mode login \
+          --overwrite
+          
 
