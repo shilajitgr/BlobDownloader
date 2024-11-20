@@ -65,10 +65,5 @@ jobs:
         AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
         AZURE_CONTAINER_NAME: ${{ secrets.AZURE_CONTAINER_NAME }}
         BINARY_PATH: ${{ secrets.BINARY_PATH }}
-      run: |
-        az storage blob upload --account-name $AZURE_STORAGE_ACCOUNT \
-          --container-name $AZURE_CONTAINER_NAME \
-          --name downloader.zip \
-          --file $BINARY_PATH
-          --auth-mode login
+      run: az storage blob upload --account-name $AZURE_STORAGE_ACCOUNT -f $BINARY_PATH -c $AZURE_CONTAINER_NAME -n downloader.zip
 
