@@ -68,4 +68,5 @@ jobs:
           --container-name $AZURE_CONTAINER_NAME \
           --name downloader.zip \
           --file $BINARY_PATH
+          --auth-mode login
 
