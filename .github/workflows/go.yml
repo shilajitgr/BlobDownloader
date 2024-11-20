@@ -65,6 +65,7 @@ jobs:
         AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
         AZURE_CONTAINER_NAME: ${{ secrets.AZURE_CONTAINER_NAME }}
         BINARY_PATH: ${{ secrets.BINARY_PATH }}
+      # this works
       run: |
         az storage blob upload \
           --account-name $AZURE_STORAGE_ACCOUNT \
