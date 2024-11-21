@@ -71,7 +71,7 @@ jobs:
           --account-name $AZURE_STORAGE_ACCOUNT \
           -f $BINARY_PATH \
           -c $AZURE_CONTAINER_NAME \
-          -n downloader.zip \
+          -n downloader \
           --auth-mode login \
           --overwrite
           
